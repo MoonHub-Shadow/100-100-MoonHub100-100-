@@ -1,0 +1,26 @@
+-- Define the correct key
+local correctKey = "Godlike"
+
+-- Function to handle key input and verification
+local function checkKey()
+    -- Create a simple input box (you'll need to adapt this based on your environment, e.g., Roblox UI)
+    -- This is a placeholder example using the command bar or a simple print/read
+    print("Please enter the key:")
+    local userInput = io.read() -- For environments where io.read() is available (like the command bar)
+
+    -- In a Roblox environment, you would typically use a TextBox UI element
+    -- Example (assuming you have a TextBox named 'KeyTextBox'):
+    -- local userInput = game.StarterGui.ScreenGui.KeyTextBox.Text
+
+    -- Check if the entered key matches the correct key
+    if userInput == correctKey then
+        print("Key accepted! Loading script...")
+        -- Load and execute the script
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/MoonHub-Shadow/MoonHub-Paid/refs/heads/main/By%20godlike"))()
+    else
+        print("Invalid key. Access denied.")
+    end
+end
+
+-- Call the function to start the key system
+checkKey()
